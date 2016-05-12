@@ -396,9 +396,7 @@ void Game::revert(int z,string p,int t)
 bool Game::WinOrLose(int t,int z)
 {
 
-    if(t==2)
-    {
-        if(detected(t))
+        if(detected(1))
         {
 
             try
@@ -406,7 +404,7 @@ bool Game::WinOrLose(int t,int z)
                 if(m.checkpos(piece[15]->getposition(),(piece[15]->getposition()+1),t))
                 {
                     piece[15]->setposition(piece[15]->getposition()+1);
-                    if(!detected(t))
+                    if(!detected(1))
                     {
                         piece[15]->setposition(piece[15]->getposition()-1);
                         return 0;
@@ -424,7 +422,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[15]->getposition(),(piece[15]->getposition()-1),t))
                 {
                     piece[15]->setposition(piece[15]->getposition()-1);
-                    if(!detected(t))
+                    if(!detected(1))
                     {
                         piece[15]->setposition(piece[15]->getposition()+1);
                         return 0;
@@ -442,7 +440,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[15]->getposition(),(piece[15]->getposition()+9),t))
                 {
                     piece[15]->setposition(piece[15]->getposition()+9);
-                    if(!detected(t))
+                    if(!detected(1))
                     {
                         piece[15]->setposition(piece[15]->getposition()-9);
                         return 0;
@@ -461,7 +459,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[15]->getposition(),(piece[15]->getposition()-9),t))
                 {
                     piece[15]->setposition(piece[15]->getposition()-9);
-                    if(!detected(t))
+                    if(!detected(1))
                     {
                         piece[15]->setposition(piece[15]->getposition()+9);
                         return 0;
@@ -480,7 +478,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[15]->getposition(),(piece[15]->getposition()-11),t))
                 {
                     piece[15]->setposition(piece[15]->getposition()-11);
-                    if(!detected(t))
+                    if(!detected(1))
                     {
                         piece[15]->setposition(piece[15]->getposition()+11);
                         return 0;
@@ -497,7 +495,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[15]->getposition(),(piece[15]->getposition()+11),t))
                 {
                     piece[15]->setposition(piece[15]->getposition()+11);
-                    if(!detected(t))
+                    if(!detected(1))
                     {
                         piece[15]->setposition(piece[15]->getposition()-11);
                         return 0;
@@ -515,7 +513,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[15]->getposition(),(piece[15]->getposition()+10),t))
                 {
                     piece[15]->setposition(piece[15]->getposition()+10);
-                    if(!detected(t))
+                    if(!detected(1))
                     {
                         piece[15]->setposition(piece[15]->getposition()-10);
                         return 0;
@@ -534,7 +532,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[15]->getposition(),(piece[15]->getposition()-10),t))
                 {
                     piece[15]->setposition(piece[15]->getposition()-10);
-                    if(!detected(t))
+                    if(!detected(1))
                     {
                         piece[15]->setposition(piece[15]->getposition()+10);
                         return 0;
@@ -582,18 +580,16 @@ bool Game::WinOrLose(int t,int z)
 
             return 1;
         }
-    }
 
-    if(t==1)
-    {
-        if(detected(t))
+
+        if(detected(2))
         {
             try
             {
                 if(m.checkpos(piece[31]->getposition(),(piece[31]->getposition()+1),t))
                 {
                     piece[31]->setposition(piece[31]->getposition()+1);
-                    if(!detected(t))
+                    if(!detected(2))
                     {
                         piece[31]->setposition(piece[31]->getposition()-1);
                         return 0;
@@ -612,7 +608,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[31]->getposition(),(piece[31]->getposition()-1),t))
                 {
                     piece[31]->setposition(piece[31]->getposition()-1);
-                    if(!detected(t))
+                    if(!detected(2))
                     {
                         piece[31]->setposition(piece[31]->getposition()+1);
                         return 0;
@@ -631,7 +627,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[31]->getposition(),(piece[31]->getposition()+9),t))
                 {
                     piece[31]->setposition(piece[31]->getposition()+9);
-                    if(!detected(t))
+                    if(!detected(2))
                     {
                         piece[31]->setposition(piece[31]->getposition()-9);
                         return 0;
@@ -651,7 +647,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[31]->getposition(),(piece[31]->getposition()-9),t))
                 {
                     piece[31]->setposition(piece[31]->getposition()-9);
-                    if(!detected(t))
+                    if(!detected(2))
                     {
                         piece[31]->setposition(piece[31]->getposition()+9);
                         return 0;
@@ -670,7 +666,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[31]->getposition(),(piece[31]->getposition()-11),t))
                 {
                     piece[31]->setposition(piece[31]->getposition()-11);
-                    if(!detected(t))
+                    if(!detected(2))
                     {
                         piece[31]->setposition(piece[31]->getposition()+11);
                         return 0;
@@ -689,7 +685,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[31]->getposition(),(piece[31]->getposition()+11),t))
                 {
                     piece[31]->setposition(piece[31]->getposition()+11);
-                    if(!detected(t))
+                    if(!detected(2))
                     {
                         piece[31]->setposition(piece[31]->getposition()-11);
                         return 0;
@@ -707,7 +703,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[31]->getposition(),(piece[31]->getposition()+10),t))
                 {
                     piece[31]->setposition(piece[31]->getposition()+10);
-                    if(!detected(t))
+                    if(!detected(2))
                     {
                         piece[31]->setposition(piece[31]->getposition()-10);
                         return 0;
@@ -725,7 +721,7 @@ bool Game::WinOrLose(int t,int z)
                 if (m.checkpos(piece[31]->getposition(),(piece[31]->getposition()-10),t))
                 {
                     piece[31]->setposition(piece[31]->getposition()-10);
-                    if(!detected(t))
+                    if(!detected(2))
                     {
                         piece[31]->setposition(piece[31]->getposition()+10);
                         return 0;
@@ -774,7 +770,9 @@ bool Game::WinOrLose(int t,int z)
 
             return 1;
         }
-    }
+
+        return 0;
+
 
 }
 bool Game::detected(int t)
