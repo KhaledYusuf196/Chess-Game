@@ -16,7 +16,7 @@ using namespace std;
 
 int main()
 {
-    Game x;
+    Game *x;
     char k=1;
     int c=1;
             cout<<"**********************************************************\n";
@@ -180,7 +180,9 @@ int main()
         Sleep(1000);
 
         system("cls");
-        x.load();
+        x=new Game;
+        x->load();
+        delete x;
     }
     if(c==1)
     {
@@ -203,7 +205,9 @@ int main()
 
         system("cls");
 
-        x.start();
+        x=new Game;
+        x->start();
+        delete x;
     }
 
     system("pause");
